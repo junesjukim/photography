@@ -3,7 +3,7 @@
 Personal photography portfolio, published at <https://junesjukim.github.io/photography/>.
 
 Built from [rockem/astro-photography-portfolio](https://github.com/rockem/astro-photography-portfolio)
-(Astro, TypeScript, Tailwind, Sharp). Images are optimised at build time.
+(Astro, TypeScript, plain CSS, Sharp). Images are optimised at build time; the lightbox, scroll scenes and filter animations are small dependency-free scripts.
 
 ## Develop
 
