@@ -1,12 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// Standalone site served from the domain root.
-// Set SITE_URL at build time (the deploy workflow does) to match the real address.
+// Served as a project page under the existing user site: junesjukim.github.io/photography/
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.SITE_URL || 'https://junekim-photo.github.io',
-	base: '/',
+	site: 'https://junesjukim.github.io',
+	base: '/photography',
 	vite: {
 		plugins: [tailwindcss()],
 	},
