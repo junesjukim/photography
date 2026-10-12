@@ -1,6 +1,6 @@
 # June Kim — Photography
 
-Personal photography portfolio, published at <https://junesjukim.github.io/photography/>.
+Personal photography portfolio, published at the standalone address set in `SITE_URL`.
 
 Built from [rockem/astro-photography-portfolio](https://github.com/rockem/astro-photography-portfolio)
 (Astro, TypeScript, Tailwind, Sharp). Images are optimised at build time.
@@ -9,7 +9,7 @@ Built from [rockem/astro-photography-portfolio](https://github.com/rockem/astro-
 
 ```bash
 npm ci
-npm run dev        # http://localhost:4321/photography/
+npm run dev        # http://localhost:4321/
 npm test
 npm run build
 ```
@@ -24,7 +24,7 @@ Needs Node 18.17+ (CI uses 22).
 
 ## Site settings
 
-- `astro.config.mts`: `site` and `base` (the repository name).
+- `astro.config.mts`: `site` (override with the `SITE_URL` env var); `base` stays `/`.
 - `site.config.mts`: title, owner, social links.
 - `src/content/about.md`: About page. `public/images/profile.webp`: profile photo.
 
