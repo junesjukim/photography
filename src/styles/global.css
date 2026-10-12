@@ -1,17 +1,18 @@
 /* ───────────── tokens ───────────── */
 :root {
 	--font-sans:
-		'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-	--font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+		'Source Sans 3', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-	--bg: #eceae4;
-	--fg: #2c2c2c;
-	--fg-soft: #7a7a7a;
-	--line: rgba(0, 0, 0, 0.09);
-	--surface: #e1ded6;
-	--raised: #f6f5f1;
-	--accent: #c8553d;
-	--shadow: 0 40px 70px -40px rgba(50, 36, 22, 0.45), 0 12px 28px -14px rgba(50, 36, 22, 0.28);
+	--bg: #faf9f5;
+	--fg: #141413;
+	--fg-soft: #5e5d59;
+	--line: #e3e0d6;
+	--surface: #f2f0e9;
+	--raised: #ffffff;
+	--accent: #141413;
+	--shadow: 0 30px 60px -36px rgba(20, 20, 19, 0.35), 0 10px 24px -14px rgba(20, 20, 19, 0.2);
 
 	/* Apple-style curves: a long, soft landing and a gentle spring. */
 	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -23,12 +24,12 @@
 }
 
 :root[data-theme='dark'] {
-	--bg: #1c1b19;
-	--fg: #ebe9e4;
-	--fg-soft: #8f8c85;
-	--line: rgba(255, 255, 255, 0.1);
-	--surface: #272624;
-	--raised: #34322f;
+	--bg: #1f1e1d;
+	--fg: #f3f1ea;
+	--fg-soft: #a8a59b;
+	--line: #353430;
+	--surface: #282725;
+	--raised: #302f2c;
 	--shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9), 0 12px 30px -14px rgba(0, 0, 0, 0.6);
 	color-scheme: dark;
 }
@@ -162,9 +163,10 @@ html[data-scrolled] .nav::after {
 }
 
 .brand {
-	font-size: 15px;
+	font-family: var(--font-serif);
+	font-size: 21px;
 	font-weight: 500;
-	letter-spacing: -0.01em;
+	line-height: 1;
 	transition: opacity 0.3s;
 }
 .brand:hover {
@@ -214,16 +216,18 @@ html[data-scrolled] .nav::after {
 .theme-toggle {
 	display: grid;
 	place-items: center;
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
+	width: 34px;
+	height: 34px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
 	color: var(--fg);
 	transition:
 		transform 0.7s var(--ease-spring),
-		background-color 0.3s;
+		border-color 0.3s;
 }
 .theme-toggle:hover {
-	background: var(--line);
+	border-color: var(--fg);
 }
 :root[data-theme='dark'] .theme-toggle {
 	transform: rotate(180deg);
@@ -241,10 +245,11 @@ main {
 }
 
 .page-title {
-	font-size: clamp(36px, 5.4vw, 64px);
-	font-weight: 300;
-	letter-spacing: -0.035em;
-	line-height: 1.02;
+	font-family: var(--font-serif);
+	font-size: clamp(36px, 5vw, 56px);
+	font-weight: 400;
+	letter-spacing: -0.025em;
+	line-height: 1.08;
 }
 
 .mono {
@@ -530,62 +535,6 @@ html[data-scrolled] .cue {
 		opacity 0.9s var(--ease-out),
 		transform 1.2s var(--ease-out);
 }
-.tile:hover img,
-.tile:focus-visible img {
-	transform: scale(1.045);
-}
-
-.tile::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 55%);
-	opacity: 0;
-	transition: opacity 0.5s var(--ease-out);
-	pointer-events: none;
-}
-.tile:hover::after,
-.tile:focus-visible::after {
-	opacity: 1;
-}
-
-.tile-cap {
-	position: absolute;
-	inset: auto 0 0 0;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	padding: 14px 16px;
-	font-size: 13px;
-	line-height: 1.35;
-	opacity: 0;
-	transform: translateY(10px);
-	transition:
-		opacity 0.5s var(--ease-out),
-		transform 0.7s var(--ease-out);
-	pointer-events: none;
-}
-.tile-cap b {
-	font-weight: 500;
-}
-.tile-cap i {
-	font-style: normal;
-	font-family: var(--font-mono);
-	font-size: 11px;
-	opacity: 0.8;
-}
-.tile:hover .tile-cap,
-.tile:focus-visible .tile-cap {
-	opacity: 1;
-	transform: none;
-}
-
-@media (hover: none) {
-	.tile::after,
-	.tile-cap {
-		display: none;
-	}
-}
 
 /* ───────────── lightbox ───────────── */
 .lb {
@@ -761,9 +710,10 @@ html[data-scrolled] .cue {
 }
 .prose h3 {
 	margin-bottom: 20px;
-	font-size: clamp(24px, 3vw, 34px);
-	font-weight: 300;
-	letter-spacing: -0.025em;
+	font-family: var(--font-serif);
+	font-size: clamp(24px, 3vw, 32px);
+	font-weight: 400;
+	letter-spacing: -0.02em;
 	line-height: 1.15;
 	color: var(--fg);
 }

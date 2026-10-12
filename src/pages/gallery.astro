@@ -62,10 +62,6 @@ const filters = [{ id: 'all', name: 'All' }, ...collections];
 							loading={i < 6 ? 'eager' : 'lazy'}
 							decoding="async"
 						/>
-						<span class="tile-cap">
-							<b>{photo.title}</b>
-							{photo.sub && <i>{photo.sub}</i>}
-						</span>
 					</a>
 				))
 			}
