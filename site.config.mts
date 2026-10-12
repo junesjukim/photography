@@ -1,5 +1,5 @@
 import type { AstroInstance } from 'astro';
-import { Github, Instagram } from 'lucide-astro';
+import { Github, Globe } from 'lucide-astro';
 
 export interface SocialLink {
 	name: string;
@@ -8,20 +8,20 @@ export interface SocialLink {
 }
 
 export default {
-	title: 'SR',
+	title: 'JK',
 	favicon: 'favicon.ico',
-	owner: 'Sara Richard',
+	owner: 'June Kim',
 	profileImage: 'profile.webp',
 	socialLinks: [
 		{
 			name: 'GitHub',
-			url: 'https://github.com/rockem/astro-photography-portfolio',
+			url: 'https://github.com/junesjukim',
 			icon: Github,
 		} as SocialLink,
 		{
-			name: 'Instagram',
-			url: 'https://www.instagram.com',
-			icon: Instagram,
+			name: 'Website',
+			url: 'https://junesjukim.github.io/',
+			icon: Globe,
 		} as SocialLink,
 	],
 };

@@ -2,13 +2,12 @@
 title: About me
 ---
 
-### Hi, I'm Sara Richard 👋
+### Hi, I'm June Kim 👋
 
-I've been a photographer for over 10 years, focusing primarily on landscape and portrait photography. My journey began
-with a simple point-and-shoot camera while traveling through the mountains of Colorado, which sparked a passion that has
-taken me across the globe.
-My approach to photography centers on finding the extraordinary in ordinary moments. I believe that beauty exists
-everywhere – in urban streets, remote wilderness, and human connections. My goal is to capture these fleeting instances
-in a way that allows viewers to see the world through a different lens.
-When I'm not behind the camera, you can find me hiking in national parks, exploring new cities, or enjoying a cup of
-coffee at local cafés while planning my next photo adventure.
+I'm an undergraduate researcher at the SNU Visual Computing Lab, working on robot learning, vision-language-action
+models, world action models, and synthetic robot data.
+
+This is the other side of my screen: a small gallery of photographs I take when I'm away from the lab. I'm drawn to
+quiet, ordinary scenes, and I try to photograph them the way I'd like to remember them.
+
+My research and projects live at [junesjukim.github.io](https://junesjukim.github.io/).
